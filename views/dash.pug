@@ -1,0 +1,59 @@
+extends layout
+
+block content
+    .col-md-12.col-sm-12.col-xs-12
+        .panel.panel-primary
+        .panel-heading
+            // Tabs
+            ul.nav.panel-tabs
+            li
+                a(data-toggle="tab" href="#tab1")
+                i.icofont.icon-ribbon
+                span.hidden-xs Unanswered Questions
+            li
+                a(data-toggle="tab" href="#tab2")
+                i.icofont.icon-layers
+                span.hidden-xs Top Questions
+            li
+                a(data-toggle="tab" href="#tab4")
+                i.icofont.icon-linegraph
+                span.hidden-xs Questions with no answers
+        .panel-body
+        .tab-content
+            #tab1.tab-pane.active
+            // Question Listing
+            .listing-grid
+                .row
+                .col-md-2.col-sm-2.col-xs-12.hidden-xs
+                    a(data-toggle="tooltip" data-placement="bottom" data-original-title="Martina Jaz" href="#")
+                    img.img-responsive.center-block(alt="" src="images/authors/1.jpg")
+                .col-md-7.col-sm-8.col-xs-12
+                    h3
+                    a(href="#")  Php recursive function not working right
+                    .listing-meta
+                    span
+                        i.fa.fa-clock-o(aria-hidden="true")
+                        | 8 mintes ago
+                    span
+                        i.fa.fa.fa-eye(aria-hidden="true")
+                        |  750 Views
+                .col-md-3.col-sm-2.col-xs-12
+                    ul.question-statistic
+                        li.active
+                            a(data-toggle="tooltip" data-placement="bottom" data-original-title="Answers")
+                                span 2
+                        li
+                            a(data-toggle="tooltip" data-placement="bottom" data-original-title="Votes")
+                                span 0
+                .col-md-10.col-sm-10.col-xs-12
+                    p
+                    | On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment.
+                    .pull-right.tagcloud
+                        a(href="") Php
+                        a(href="") recursive
+                        a(href="") error
+            // Question Listing End
+            // Pagination View More
+            .text-center.clearfix
+            button.btn.btn-primary.btn-lg View All Question
+            // Pagination View More End
