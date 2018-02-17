@@ -1,0 +1,212 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="utf-8")
+    meta(http-equiv="X-UA-Compatible" content="IE=edge")
+    meta(name="author" content="ScriptsBundle")
+    title ETHAnswer - Bounty for Question and Answers
+    // =-=-=-=-=-=-= Favicons Icon =-=-=-=-=-=-=
+    link(rel="icon" href="images/favicon.ico" type="image/x-icon")
+    // =-=-=-=-=-=-= Mobile Specific =-=-=-=-=-=-=
+    meta(name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1")
+    // =-=-=-=-=-=-= Bootstrap CSS Style =-=-=-=-=-=-=
+    link(rel="stylesheet" href="css/bootstrap.css")
+    // =-=-=-=-=-=-= Template CSS Style =-=-=-=-=-=-=
+    link(rel="stylesheet" href="css/style.css")
+    // =-=-=-=-=-=-= Font Awesome =-=-=-=-=-=-=
+    link(rel="stylesheet" href="css/font-awesome.css")
+    // =-=-=-=-=-=-= Et Line Fonts =-=-=-=-=-=-=
+    link(rel="stylesheet" href="css/et-line-fonts.css")
+    // =-=-=-=-=-=-= Google Fonts =-=-=-=-=-=-=
+    link(href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic|Merriweather:400,300,300italic,400italic,700,700italic" rel="stylesheet" type="text/css")
+    // =-=-=-=-=-=-= Owl carousel =-=-=-=-=-=-=
+    link(rel="stylesheet" type="text/css" href="css/owl.carousel.css")
+    link(rel="stylesheet" type="text/css" href="css/owl.style.css")
+    // =-=-=-=-=-=-= Highliter Css =-=-=-=-=-=-=
+    link(type="text/css" rel="stylesheet" href="css/styles/shCoreDefault.css")
+    // =-=-=-=-=-=-= Css Animation =-=-=-=-=-=-=
+    link(type="text/css" rel="stylesheet" href="css/animate.min.css")
+    // =-=-=-=-=-=-= Hover Dropdown =-=-=-=-=-=-=
+    link(type="text/css" rel="stylesheet" href="css/bootstrap-dropdownhover.min.css")
+    // JavaScripts
+    script(src="js/modernizr.js")
+    script(type='text/javascript' src='https://api.stackexchange.com/js/2.0/all.js')
+    // HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries
+    // WARNING: Respond.js doesn't work if you view the page via file://
+    //if lt IE 9
+      script(src="http://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js")
+      script(src="http://oss.maxcdn.com/respond/1.4.2/respond.min.js")
+
+  body
+    // =-=-=-=-=-=-= PRELOADER =-=-=-=-=-=-=
+    .preloader
+      span.preloader-gif
+    // =-=-=-=-=-=-= HEADER =-=-=-=-=-=-=
+    .top-bar
+      .container
+        .row
+          .col-lg-4.col-md-4.col-sm-6.col-xs-4
+            ul.top-nav.nav-left
+              li
+                a(href="index.html") Home
+              li.hidden-xs
+                a(href="#") Contact Us
+          .col-lg-8.col-md-8.col-sm-6.col-xs-8
+            ul.top-nav.nav-right
+              li
+                button(id='login-button')
+                  | Login
+              li
+                a(href="register.html")
+                  i.fa.fa-user-plus(aria-hidden="true")
+                  | Signup
+              li.dropdown
+                a.dropdown-toggle(data-hover="dropdown" data-toggle="dropdown" data-animations="fadeInUp")
+                  img.img-circle.resize(alt="" src="images/authors/13.jpg")
+                  span.hidden-xs.small-padding
+                    span
+                    i.fa.fa-caret-down
+                ul.dropdown-menu
+                  li
+                    a(href="#")
+                      i.icon-bargraph
+                      |  Dashboard
+                  li
+                    a(href="#")
+                      i.icon-gears
+                      |  Profile Setting
+                  li
+                    a(href="#")
+                      i.icon-heart
+                      |  Questions
+                  li
+                    a(href="#")
+                      i.icon-lock
+                      |  Logout
+    // =-=-=-=-=-=-= HEADER Navigation =-=-=-=-=-=-=
+    .navbar.navbar-default
+      .container
+        // header
+        .navbar-header
+          button.navbar-toggle(data-target=".navbar-collapse" data-toggle="collapse" type="button")
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+          // logo
+          a.navbar-brand(href="index.html")
+            img.img-responsive(alt="" src="images/logo.png")
+          // header end
+        // navigation menu
+        .navbar-collapse.collapse
+          // right bar
+          ul.nav.navbar-nav.navbar-right
+            li.hidden-sm
+              a(href="how-work.html") How  It Works
+            li
+              a(href="listing.html") Browse Questions
+            li
+              .btn-nav
+                a.btn.btn-primary.btn-small.navbar-btn(href="post-question.html") Post Question
+        // navigation menu end
+        // /.navbar-collapse
+    // HEADER Navigation End
+    // =-=-=-=-=-=-= HOME =-=-=-=-=-=-=
+    .full-section.search-section
+      .search-area.container
+        h3.search-title Have a Question?
+        p.search-tag-line If you have any question you can ask below or enter what you are looking for!
+        form#search-form.search-form.clearfix(autocomplete="off" method="get")
+          input.search-term(type="text" title="* Please enter a search term!" placeholder="Type your search terms here" autocomplete="off")
+          input.search-btn(type="submit" value="Search")
+    // =-=-=-=-=-=-= HOME END =-=-=-=-=-=-=
+    // =-=-=-=-=-=-= Main Area =-=-=-=-=-=-=
+    .main-content-area
+      // =-=-=-=-=-=-= Latest Questions  =-=-=-=-=-=-=
+      section#latest-post.white.question-tabs.padding-bottom-80
+        .container
+          .row
+            // Content Area Bar
+            block content
+            .clearfix
+        // end container
+      // =-=-=-=-=-=-= Latest Questions  End =-=-=-=-=-=-=
+    // =-=-=-=-=-=-= Main Area End =-=-=-=-=-=-=
+    // =-=-=-=-=-=-= FOOTER =-=-=-=-=-=-=
+    footer.footer-area
+      // Footer Upper
+      .footer-content
+        .container
+          .row.clearfix
+            .col-md-8.col-md-offset-2
+              .footer-content.text-center.no-padding.margin-bottom-40
+                .logo-footer
+                  img#logo-footer.center-block(src="images/logo-1.png" alt="")
+                p Set bounty on your questions and get answers faster
+            // Two 4th column
+    // =-=-=-=-=-=-= JQUERY =-=-=-=-=-=-=
+    script(src="js/jquery.min.js")
+    // Bootstrap Core Css
+    script(src="js/bootstrap.min.js")
+    // Jquery Smooth Scroll
+    script(src="js/jquery.smoothscroll.js")
+    // Jquery Easing
+    script(type="text/javascript" src="js/easing.js")
+    // Jquery Counter
+    script(src="js/jquery.countTo.js")
+    // Jquery Waypoints
+    script(src="js/jquery.waypoints.js")
+    // Jquery Appear Plugin
+    script(src="js/jquery.appear.min.js")
+    // Carousel Slider
+    script(src="js/carousel.min.js")
+    // Jquery Parallex
+    script(src="js/jquery.stellar.min.js")
+    // Style Switcher
+    script(src="js/bootstrap-dropdownhover.min.js")
+    // Include jQuery Syntax Highlighter
+    script(type="text/javascript" src="scripts/shCore.js")
+    script(type="text/javascript" src="scripts/shBrushPhp.js")
+    // Template Core JS
+    script(src="js/custom.js")
+    script.
+      // For simplicity, we're using jQuery for some things
+      //   However, the library has no jQuery dependency
+      $(function(){
+      // Initialize library
+      SE.init({ 
+          // Parameters obtained by registering an app, these are specific to the SE
+          //   documentation site
+          clientId: 11854, 
+          key: 'ekGQbH8mopUzetlfSTPUrQ((', 
+          // Used for cross domain communication, it will be validated
+          channelUrl: 'http://ethanswer.com/',
+          redirect_uri:'http://ethanswer.com/',
+          // Called when all initialization is finished
+          complete: function(data) { 
+              $('#login-button')
+                  .removeAttr('disabled')
+                  .text('login to stackoverflow'); 
+          }
+      });
+
+      // Attach click handler to login button
+      $('#login-button').click(function() {
+
+          // Make the authentication call, note that being in an onclick handler
+          //   is important; most browsers will hide windows opened without a
+          //   'click blessing'
+          SE.authenticate({
+              success: function(data) { 
+                  alert(
+                      'User Authorized with account id = ' + 
+                      data.networkUsers[0].account_id + ', got access token = ' + 
+                      data.accessToken
+                  ); 
+              },
+              error: function(data) { 
+                  alert('An error occurred:\n' + data.errorName + '\n' + data.errorMessage); 
+              },
+              networkUsers: true
+          });
+      });
+      });
