@@ -269,11 +269,12 @@ html(lang="en")
       var bounty = web3.eth.contract(bounty_abi).at(bounty_address());
       var expire_date = new Date();
       expire_date.setDate(expire_date.getDate() + 10);
+      //- ipfs.ipfsApi = IpfsApi({host: 'ipfs.infura.io', port: '5001', protocol: "https", root:'/api/v0'});
+      //- ipfs.setProvider({ host: 'ipfs.infura.io', port: 5001, protocol: 'https', root:'/api/v0'});
       var ipfs = window.IpfsApi({host: 'ipfs.infura.io', port: '5001', protocol: "https", root:'/api/v0'})
       console.log(ipfs)
       function startBounty(title,userId,link,questionId) {
-        //ipfs.ipfsApi = IpfsApi({host: 'ipfs.infura.io', port: '5001', protocol: "https", root:'/api/v0'});
-        //ipfs.setProvider({ host: 'ipfs.infura.io', port: 5001, protocol: 'https', root:'/api/v0'});
+        
 
         var fsPayload = {
           payload: {
