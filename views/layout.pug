@@ -28,6 +28,8 @@ html(lang="en")
     link(type="text/css" rel="stylesheet" href="css/animate.min.css")
     // =-=-=-=-=-=-= Hover Dropdown =-=-=-=-=-=-=
     link(type="text/css" rel="stylesheet" href="css/bootstrap-dropdownhover.min.css")
+    // =-=-=-=-=-=-= Custom Stylesheets =-=-=-=-=-=-=
+    link(type="text/css" rel="stylesheet" href="stylesheets/style.css")
     // JavaScripts
     script(src="js/modernizr.js")
     script(type='text/javascript' src='https://api.stackexchange.com/js/2.0/all.js')
@@ -111,15 +113,15 @@ html(lang="en")
         // navigation menu end
         // /.navbar-collapse
     // HEADER Navigation End
-    // =-=-=-=-=-=-= HOME =-=-=-=-=-=-=
-    .full-section.search-section
-      .search-area.container
-        h3.search-title Have a Question?
-        p.search-tag-line If you have any question you can ask below or enter what you are looking for!
-        form#search-form.search-form.clearfix(autocomplete="off" method="get")
-          input.search-term(type="text" title="* Please enter a search term!" placeholder="Type your search terms here" autocomplete="off")
-          input.search-btn(type="submit" value="Search")
-    // =-=-=-=-=-=-= HOME END =-=-=-=-=-=-=
+    //- // =-=-=-=-=-=-= HOME =-=-=-=-=-=-=
+    //- .full-section.search-section
+    //-   .search-area.container
+    //-     h3.search-title Have a Question?
+    //-     p.search-tag-line If you have any question you can ask below or enter what you are looking for!
+    //-     form#search-form.search-form.clearfix(autocomplete="off" method="get")
+    //-       input.search-term(type="text" title="* Please enter a search term!" placeholder="Type your search terms here" autocomplete="off")
+    //-       input.search-btn(type="submit" value="Search")
+    //- // =-=-=-=-=-=-= HOME END =-=-=-=-=-=-=
     // =-=-=-=-=-=-= Main Area =-=-=-=-=-=-=
     .main-content-area
       // =-=-=-=-=-=-= Latest Questions  =-=-=-=-=-=-=
@@ -169,6 +171,7 @@ html(lang="en")
     script(type="text/javascript" src="scripts/shBrushPhp.js")
     // Template Core JS
     script(src="js/custom.js")
+    script(type='text/javascript' src='js/answerModal.js')
     script.
       if (window.location.href.indexOf('localhost') < 0) {
         // For simplicity, we're using jQuery for some things
@@ -198,16 +201,19 @@ html(lang="en")
             //   is important; most browsers will hide windows opened without a
             //   'click blessing'
             SE.authenticate({
-                success: function(data) { 
-                    alert(
-                        'User Authorized with account id = ' + 
-                        data.networkUsers[0].account_id + ', got access token = ' + 
-                        data.accessToken
-                    ); 
+                success: function(data) {
+                    localStorage.setItem('account_id',JSON.stringify(data.networkUsers[0].account_id));
+                    localStorage.setItem('access_token',JSON.stringify(data.accessToken));
+                    //- alert(
+                    //-     'User Authorized with account id = ' + 
+                    //-     data.networkUsers[0].account_id + ', got access token = ' + 
+                    //-     data.accessToken
+                    //- ); 
                 },
                 error: function(data) { 
                     alert('An error occurred:\n' + data.errorName + '\n' + data.errorMessage); 
                 },
+                scope: ['read_inbox','write_access'],
                 networkUsers: true
             });
         });
