@@ -7,7 +7,7 @@ block content
                 h2.myBountiesLabel My Bounties
                 .tab-content
                     #tab1.tab-pane.active
-                        - let question = questions[0]
+                        - let question = questions[12]
                         //each question in questions
                         // Question Listing
                         .listing-grid
@@ -50,7 +50,7 @@ block content
             div.allBounties
                 h2.allBountiesLabel All Bounties
                 div.bountyBox
-                    each question in questions
+                    each question in questions.slice(8,14)
                         .listing-grid
                             .row
                                 .col-md-2.col-sm-2.col-xs-12.hidden-xs
@@ -137,10 +137,17 @@ block content
                             div.bountyInputFields
                                 fieldset
                                     label Amount of ether to commit
+<<<<<<< HEAD
                                     input(type='number' step='1' min='0').pull-right
                                 fieldset
                                     label Expiration time for ether (in days)
                                     input(type='number' step='0.5' min='0').pull-right
+=======
+                                    input(type='number' step='1' min='0' value='0.1').pull-right
+                                fieldset
+                                    label Expiration time for ether (in days)
+                                    input(type='number' step='0.5' min='0' value='10').pull-right
+>>>>>>> 3546313c9cb403b08160caffdd98fdb23d7fb5c0
                     div.modal-footer
                         button.btn.btn-primary(onClick="startBounty('"+question.title+"','"+question.owner.user_id+"','"+question.link+"',"+question.question_id+")" type='button' data-dismiss='modal') Initiate
                         button.btn.btn-secondary(type='button', data-dismiss='modal') Close
@@ -153,7 +160,7 @@ block content
                         button.close(type='button', data-dismiss='modal', aria-label='close')
                             span(aria-hidden='true') &times;
                     div.modal-body
-                        span.bountyAmount Gitcoin: 0.004
+                        span.bountyAmount Ether: 0.004
                         br
                         div.answer
                             p.answer Answer

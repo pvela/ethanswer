@@ -229,25 +229,7 @@ html(lang="en")
       var bounty_abi = [{"inputs": [{"type": "uint256", "name": "_bountyId"}], "constant": false, "name": "killBounty", "outputs": [], "payable": false, "type": "function"}, {"inputs": [{"type": "uint256", "name": "_bountyId"}], "constant": true, "name": "getBountyToken", "outputs": [{"type": "address", "name": ""}], "payable": false, "type": "function"}, {"inputs": [{"type": "uint256", "name": "_bountyId"}, {"type": "string", "name": "_data"}], "constant": false, "name": "fulfillBounty", "outputs": [], "payable": false, "type": "function"}, {"inputs": [{"type": "uint256", "name": "_bountyId"}, {"type": "uint256", "name": "_newDeadline"}], "constant": false, "name": "extendDeadline", "outputs": [], "payable": false, "type": "function"}, {"inputs": [{"type": "uint256", "name": "_bountyId"}, {"type": "uint256", "name": "_fulfillmentId"}, {"type": "string", "name": "_data"}], "constant": false, "name": "updateFulfillment", "outputs": [], "payable": false, "type": "function"}, {"inputs": [{"type": "uint256", "name": "_bountyId"}, {"type": "uint256", "name": "_newFulfillmentAmount"}, {"type": "uint256", "name": "_value"}], "constant": false, "name": "increasePayout", "outputs": [], "payable": true, "type": "function"}, {"inputs": [{"type": "uint256", "name": "_bountyId"}, {"type": "uint256", "name": "_newFulfillmentAmount"}], "constant": false, "name": "changeBountyFulfillmentAmount", "outputs": [], "payable": false, "type": "function"}, {"inputs": [{"type": "uint256", "name": "_bountyId"}, {"type": "address", "name": "_newIssuer"}], "constant": false, "name": "transferIssuer", "outputs": [], "payable": false, "type": "function"}, {"inputs": [{"type": "uint256", "name": "_bountyId"}, {"type": "uint256", "name": "_value"}], "constant": false, "name": "activateBounty", "outputs": [], "payable": true, "type": "function"}, {"inputs": [{"type": "uint256", "name": "_bountyId"}, {"type": "uint256", "name": "_fulfillmentId"}], "constant": false, "name": "fulfillmentPayment", "outputs": [], "payable": false, "type": "function"}, {"inputs": [{"type": "address", "name": "_issuer"}, {"type": "uint256", "name": "_deadline"}, {"type": "string", "name": "_data"}, {"type": "uint256", "name": "_fulfillmentAmount"}, {"type": "address", "name": "_arbiter"}, {"type": "bool", "name": "_paysTokens"}, {"type": "address", "name": "_tokenContract"}], "constant": false, "name": "issueBounty", "outputs": [{"type": "uint256", "name": ""}], "payable": false, "type": "function"}, {"inputs": [{"type": "address", "name": "_issuer"}, {"type": "uint256", "name": "_deadline"}, {"type": "string", "name": "_data"}, {"type": "uint256", "name": "_fulfillmentAmount"}, {"type": "address", "name": "_arbiter"}, {"type": "bool", "name": "_paysTokens"}, {"type": "address", "name": "_tokenContract"}, {"type": "uint256", "name": "_value"}], "constant": false, "name": "issueAndActivateBounty", "outputs": [{"type": "uint256", "name": ""}], "payable": true, "type": "function"}, {"inputs": [{"type": "uint256", "name": "_bountyId"}], "constant": true, "name": "getBountyArbiter", "outputs": [{"type": "address", "name": ""}], "payable": false, "type": "function"}, {"inputs": [{"type": "uint256", "name": "_bountyId"}, {"type": "uint256", "name": "_value"}], "constant": false, "name": "contribute", "outputs": [], "payable": true, "type": "function"}, {"inputs": [], "constant": true, "name": "owner", "outputs": [{"type": "address", "name": ""}], "payable": false, "type": "function"}, {"inputs": [{"type": "uint256", "name": "_bountyId"}, {"type": "bool", "name": "_newPaysTokens"}, {"type": "address", "name": "_newTokenContract"}], "constant": false, "name": "changeBountyPaysTokens", "outputs": [], "payable": false, "type": "function"}, {"inputs": [{"type": "uint256", "name": "_bountyId"}], "constant": true, "name": "getBountyData", "outputs": [{"type": "string", "name": ""}], "payable": false, "type": "function"}, {"inputs": [{"type": "uint256", "name": "_bountyId"}, {"type": "uint256", "name": "_fulfillmentId"}], "constant": true, "name": "getFulfillment", "outputs": [{"type": "bool", "name": ""}, {"type": "bool", "name": ""}, {"type": "address", "name": ""}, {"type": "string", "name": ""}], "payable": false, "type": "function"}, {"inputs": [{"type": "uint256", "name": "_bountyId"}], "constant": true, "name": "getNumBounties", "outputs": [{"type": "uint256", "name": ""}], "payable": false, "type": "function"}, {"inputs": [{"type": "uint256", "name": "_bountyId"}, {"type": "address", "name": "_newArbiter"}], "constant": false, "name": "changeBountyArbiter", "outputs": [], "payable": false, "type": "function"}, {"inputs": [{"type": "uint256", "name": "_bountyId"}, {"type": "uint256", "name": "_newDeadline"}], "constant": false, "name": "changeBountyDeadline", "outputs": [], "payable": false, "type": "function"}, {"inputs": [{"type": "uint256", "name": "_bountyId"}, {"type": "uint256", "name": "_fulfillmentId"}], "constant": false, "name": "acceptFulfillment", "outputs": [], "payable": false, "type": "function"}, {"inputs": [{"type": "uint256", "name": ""}], "constant": true, "name": "bounties", "outputs": [{"type": "address", "name": "issuer"}, {"type": "uint256", "name": "deadline"}, {"type": "string", "name": "data"}, {"type": "uint256", "name": "fulfillmentAmount"}, {"type": "address", "name": "arbiter"}, {"type": "bool", "name": "paysTokens"}, {"type": "uint8", "name": "bountyStage"}, {"type": "uint256", "name": "owedAmount"}, {"type": "uint256", "name": "balance"}], "payable": false, "type": "function"}, {"inputs": [{"type": "uint256", "name": "_bountyId"}], "constant": true, "name": "getBounty", "outputs": [{"type": "address", "name": ""}, {"type": "uint256", "name": ""}, {"type": "uint256", "name": ""}, {"type": "bool", "name": ""}, {"type": "uint256", "name": ""}, {"type": "uint256", "name": ""}, {"type": "uint256", "name": ""}], "payable": false, "type": "function"}, {"inputs": [{"type": "uint256", "name": "_bountyId"}, {"type": "string", "name": "_newData"}], "constant": false, "name": "changeBountyData", "outputs": [], "payable": false, "type": "function"}, {"inputs": [{"type": "uint256", "name": "_bountyId"}], "constant": true, "name": "getNumFulfillments", "outputs": [{"type": "uint256", "name": ""}], "payable": false, "type": "function"}, {"inputs": [{"type": "address", "name": "_owner"}], "type": "constructor", "payable": false}, {"inputs": [{"indexed": false, "type": "uint256", "name": "bountyId"}], "type": "event", "name": "BountyIssued", "anonymous": false}, {"inputs": [{"indexed": false, "type": "uint256", "name": "bountyId"}, {"indexed": false, "type": "address", "name": "issuer"}], "type": "event", "name": "BountyActivated", "anonymous": false}, {"inputs": [{"indexed": false, "type": "uint256", "name": "bountyId"}, {"indexed": true, "type": "address", "name": "fulfiller"}, {"indexed": true, "type": "uint256", "name": "_fulfillmentId"}], "type": "event", "name": "BountyFulfilled", "anonymous": false}, {"inputs": [{"indexed": false, "type": "uint256", "name": "_bountyId"}, {"indexed": false, "type": "uint256", "name": "_fulfillmentId"}], "type": "event", "name": "FulfillmentUpdated", "anonymous": false}, {"inputs": [{"indexed": false, "type": "uint256", "name": "bountyId"}, {"indexed": true, "type": "address", "name": "fulfiller"}, {"indexed": true, "type": "uint256", "name": "_fulfillmentId"}], "type": "event", "name": "FulfillmentAccepted", "anonymous": false}, {"inputs": [{"indexed": false, "type": "uint256", "name": "bountyId"}, {"indexed": true, "type": "address", "name": "fulfiller"}, {"indexed": true, "type": "uint256", "name": "_fulfillmentId"}], "type": "event", "name": "FulfillmentPaid", "anonymous": false}, {"inputs": [{"indexed": false, "type": "uint256", "name": "bountyId"}], "type": "event", "name": "BountyKilled", "anonymous": false}, {"inputs": [{"indexed": false, "type": "uint256", "name": "bountyId"}, {"indexed": true, "type": "address", "name": "contributor"}, {"indexed": false, "type": "uint256", "name": "value"}], "type": "event", "name": "ContributionAdded", "anonymous": false}, {"inputs": [{"indexed": false, "type": "uint256", "name": "bountyId"}, {"indexed": false, "type": "uint256", "name": "newDeadline"}], "type": "event", "name": "DeadlineExtended", "anonymous": false}, {"inputs": [{"indexed": false, "type": "uint256", "name": "bountyId"}], "type": "event", "name": "BountyChanged", "anonymous": false}, {"inputs": [{"indexed": false, "type": "uint256", "name": "_bountyId"}, {"indexed": true, "type": "address", "name": "_newIssuer"}], "type": "event", "name": "IssuerTransferred", "anonymous": false}, {"inputs": [{"indexed": false, "type": "uint256", "name": "_bountyId"}, {"indexed": false, "type": "uint256", "name": "_newFulfillmentAmount"}], "type": "event", "name": "PayoutIncreased", "anonymous": false}];
 
 
-      var bounty_address = function (){
-          switch(document.web3network){
-              case "mainnet":
-                  return '0x066128b9f7557b5398db3d4ed141f2e64245ffa1';
-              break;
-              case "ropsten":
-                  throw "not supported";
-              break;
-              case "kovan":
-                  throw "not supported";
-              break;
-              case "rinkeby":
-                  throw "0xd5ea74ad5bcec859ea7a7104401ea1c746c84074";
-              break;
-              case "custom network":
-                  return '0xbe716ab501a10d9ea0362bf20a9b77aba1bd2d88';
-              break;
-          }
-      }
+      var bounty_address = '0xf209d2b723b6417cbf04c07e733bee776105a073';
       var erc20_approve_gas = 560000;
       var max_gas_for_erc20_bounty_post = 517849;
       var gasLimitMultiplier = 2;
@@ -260,44 +242,42 @@ html(lang="en")
         console.log(data);
       });
       console.log(coinbase);
-      var bounty = web3.eth.contract(bounty_abi).at(bounty_address());
+      var bounty = web3.eth.contract(bounty_abi).at(bounty_address);
       console.log(bounty);
       var tokenAddress = '0x0000000000000000000000000000000000000000';
       var token_contract = web3.eth.contract(token_abi).at(tokenAddress);
       var account = web3.eth.coinbase;
-      var amount = 1*weiPerEther ;
-      var bounty = web3.eth.contract(bounty_abi).at(bounty_address());
+      var amount = 0.2*weiPerEther ;
+      var bounty = web3.eth.contract(bounty_abi).at(bounty_address);
       var expire_date = new Date();
-      expire_date.setDate(expire_date.getDate() + 10);
+      expire_date.setDate(expire_date.getDate() + 1);
+      //- ipfs.ipfsApi = IpfsApi({host: 'ipfs.infura.io', port: '5001', protocol: "https", root:'/api/v0'});
+      //- ipfs.setProvider({ host: 'ipfs.infura.io', port: 5001, protocol: 'https', root:'/api/v0'});
       var ipfs = window.IpfsApi({host: 'ipfs.infura.io', port: '5001', protocol: "https", root:'/api/v0'})
       console.log(ipfs)
       function startBounty(title,userId,link,questionId) {
-        //ipfs.ipfsApi = IpfsApi({host: 'ipfs.infura.io', port: '5001', protocol: "https", root:'/api/v0'});
-        //ipfs.setProvider({ host: 'ipfs.infura.io', port: 5001, protocol: 'https', root:'/api/v0'});
+        
 
         var fsPayload = {
           payload: {
-            title: title,// A string representing the title of the bounty
-            description: null,// A string representing the description of the bounty, including all requirements
-            issuer:null,
+            title: title,
+            description: title,
+            issuer:'prabhu.v@gmail.com',
             funders:[
-              // array of personas of those who funded the issue.
+              {
+                address: account
+              }
             ],
-            categories: null,// an array of strings, representing the categories of tasks which are being requested
-            created: new Date(),// the timestamp in seconds when the bounty was created
-            tokenSymbol: 'ETH',// the symbol for the token which the bounty pays out
-            tokenAddress: tokenAddress,// the address for the token which the bounty pays out (0x0 if ETH)
-
-            // ------- add optional fields here -------
-            sourceFileName: null,// A string representing the name of the file
-            sourceFileHash: null, // The IPFS hash of the file associated with the bounty
-            sourceDirectoryHash: null,// The IPFS hash of the directory which can be used to access the file
-            webReferenceURL: link// The link to a relevant web reference (ie github issue)
+            categories: ['Questions'],
+            created: new Date().getTime(),
+            tokenSymbol: 'ETH',
+            tokenAddress: tokenAddress,
+            webReferenceURL: link
           },
           meta: {
-            platform: 'ETHAnswer',// a string representing the original posting platform (ie 'gitcoin')
-            schemaVersion: '0.1',// a string representing the version number (ie '0.1')
-            schemaName: 'ethAnswerSchema',// a string representing the name of the schema (ie 'standardSchema' or 'gitcoinSchema')
+            platform: 'ETHAnswer',
+            schemaVersion: '0.1',
+            schemaName: 'ethAnswerSchema'
           }
         }
         var fsString = JSON.stringify(fsPayload);
@@ -349,9 +329,10 @@ html(lang="en")
           amount,
           {
               from :account, 
-              value:amount/4,
-              gas:web3.toHex(50000),
-              gasPrice:web3.toHex(50000)
+              value:amount,
+              gas:270000,
+              gasLimit:270000,
+              gasPrice:20000000000
           },
           function(error,gasEstimateResult){
             if (error) {
@@ -364,7 +345,7 @@ html(lang="en")
               var gasLimit = Math.round(gas * gasLimitMultiplier);
               bounty.issueAndActivateBounty.sendTransaction(
                   account, 
-                  expire_date.getTime()+"", 
+                  expire_date.getTime(), 
                   ipfsResultData, 
                   amount, 
                   '0x0', 
@@ -374,9 +355,9 @@ html(lang="en")
                   {
                       from :account, 
                       value:amount, 
-                      gas:21000, 
-                      gasLimit:21000,
-                      gasPrice:10000000000,
+                      gas:270000, 
+                      gasLimit:270000,
+                      gasPrice:20000000000,
                   },
                   function(error,bountyResult){
                       if(error){
