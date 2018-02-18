@@ -137,17 +137,14 @@ block content
                             div.bountyInputFields
                                 fieldset
                                     label Amount of ether to commit
-<<<<<<< HEAD
                                     input(type='number' step='1' min='0').pull-right
                                 fieldset
                                     label Expiration time for ether (in days)
                                     input(type='number' step='0.5' min='0').pull-right
-=======
                                     input(type='number' step='1' min='0' value='0.1').pull-right
                                 fieldset
                                     label Expiration time for ether (in days)
                                     input(type='number' step='0.5' min='0' value='10').pull-right
->>>>>>> 3546313c9cb403b08160caffdd98fdb23d7fb5c0
                     div.modal-footer
                         button.btn.btn-primary(onClick="startBounty('"+question.title+"','"+question.owner.user_id+"','"+question.link+"',"+question.question_id+")" type='button' data-dismiss='modal') Initiate
                         button.btn.btn-secondary(type='button', data-dismiss='modal') Close
