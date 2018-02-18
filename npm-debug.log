@@ -7,7 +7,7 @@
 6 silly lifecycle ethanswer@0.0.0~prestart: no script for prestart, continuing
 7 info lifecycle ethanswer@0.0.0~start: ethanswer@0.0.0
 8 verbose lifecycle ethanswer@0.0.0~start: unsafe-perm in lifecycle true
-9 verbose lifecycle ethanswer@0.0.0~start: PATH: /usr/lib/node_modules/npm/bin/node-gyp-bin:/home/user/Desktop/ethanswer/node_modules/.bin:/home/user/.cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games
+9 verbose lifecycle ethanswer@0.0.0~start: PATH: /usr/lib/node_modules/npm/bin/node-gyp-bin:/home/user/Desktop/ethanswer/node_modules/.bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin
 10 verbose lifecycle ethanswer@0.0.0~start: CWD: /home/user/Desktop/ethanswer
 11 silly lifecycle ethanswer@0.0.0~start: Args: [ '-c', 'node ./bin/www' ]
 12 silly lifecycle ethanswer@0.0.0~start: Returned: code: 1  signal: null
