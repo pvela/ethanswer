@@ -1,3 +1,4 @@
+var ansCtrl =require('../controllers/postAnswer');
 var express = require('express');
 var router = express.Router();
 var SE_BASE_URL='https://api.stackexchange.com/2.2/'
@@ -28,4 +29,9 @@ function getQuestions(callback) {
     callback(error,jdata.items);
   });
 }
+
+//API to post answer to a question
+
+router.route('/post_answer').post(ansCtrl.postAnswer);
+
 module.exports = router;
