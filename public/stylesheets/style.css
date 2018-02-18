@@ -23,18 +23,8 @@ h2.myBountiesLabel, h2.allBountiesLabel, h2.allQuestionsLabel {
     width: wrap;
 }
 
-button.revoke {
-    display: block;
-    margin: 0 0 20px 20px;
-}
-
-div.answers {
-    margin-top: 20px;
-}
-
-p.answer {
-    display: inline-block;
-    margin: 0 20px 0 50px;
+button.revokeBtn {
+    margin-right: 10px;
 }
 
 button.answerBtnLg {
@@ -52,10 +42,6 @@ button.answerBtnLg {
 
 button.answerBtnLg:hover {
     background: #0077CC;
-}
-
-button.accept {
-    display: inline-block;
 }
 
 div.bottom {
@@ -114,6 +100,35 @@ div.questionBox img.img-responsive.center-block {
     height: 50px;
 }
 
+/* Review Bounties Modal */
+
+p.answer {
+    display: inline-block;
+    font-weight: bold;
+    margin-right: 20px;
+}
+
+span.bountyAmount {
+    display: inline-block;
+    font-weight: bold;
+    margin-bottom: 16px;
+    padding: 3px 6px;
+}
+
+div#reviewModal i.fa-check-circle {
+    color: #5EBA7D;
+    display: inline-block;
+    margin-left: 12px;
+    position: relative;
+    top: 4px;
+}
+
+div.answer {
+    border: 1px solid black;
+    padding: 8px 12px;
+    margin-bottom: 8px;
+}
+
 /* Answer Modal */
 
 h3.modal-title {
@@ -146,7 +161,7 @@ div.modal-body button.btn.btn-primary {
 
 div.bountyInputFields {
     margin: 0 auto;
-    width: 400px;
+    width: 430px;
 }
 
 div.bountyInputFields label {
