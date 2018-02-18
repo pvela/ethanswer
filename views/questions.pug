@@ -23,42 +23,127 @@ block content
                 h2.myBountiesLabel My Bounties
                 .tab-content
                     #tab1.tab-pane.active
-                        each question in questions
-                            // Question Listing
-                            .listing-grid
-                                .row
-                                    .col-md-2.col-sm-2.col-xs-12.hidden-xs
-                                        a(data-toggle="tooltip" data-placement="bottom" data-original-title=question.owner.display_name href=question.owner.link)
-                                        img.img-responsive.center-block(alt="" src=question.owner.profile_image)
-                                    .col-md-7.col-sm-8.col-xs-12
-                                        h3
-                                        a(href=question.link)  #{question.title}
-                                        .listing-meta
-                                            span
-                                                i.fa.fa-clock-o(aria-hidden="true")
-                                                | #{question.creation_date}
-                                            span
-                                                i.fa.fa.fa-eye(aria-hidden="true")
-                                                |  #{question.view_count} Views
-                                    .col-md-3.col-sm-2.col-xs-12
-                                        ul.question-statistic
-                                            button.answer Answer
-                                            li.active
-                                                a(data-toggle="tooltip" data-placement="bottom" data-original-title="Answers")
-                                                span #{question.answer_count}
-                                            li
-                                                a(data-toggle="tooltip" data-placement="bottom" data-original-title="Score")
-                                                span #{question.score}
-                                    .col-md-10.col-sm-10.col-xs-12
-                                        button Revoke
-                                        .pull-right.tagcloud
-                                            each tag in question.tags
-                                                a(href="") #{tag}
+                        - let question = questions[0]
+                        //each question in questions
+                        // Question Listing
+                        .listing-grid
+                            .row
+                                .col-md-2.col-sm-2.col-xs-12.hidden-xs
+                                    a(data-toggle="tooltip" data-placement="bottom" data-original-title=question.owner.display_name href=question.owner.link)
+                                    img.img-responsive.center-block(alt="" src=question.owner.profile_image)
+                                .col-md-7.col-sm-8.col-xs-12
+                                    h3
+                                    a(href=question.link)  #{question.title}
+                                    .listing-meta
+                                        span
+                                            i.fa.fa-clock-o(aria-hidden="true")
+                                            | #{question.creation_date}
+                                        span
+                                            i.fa.fa.fa-eye(aria-hidden="true")
+                                            |  #{question.view_count} Views
+                                .col-md-3.col-sm-2.col-xs-12
+                                    ul.question-statistic
+                                        button.answerBtnLg(type='button', data-toggle='modal', data-target='#answerModal') Answer
+                                        li.active
+                                            a(data-toggle="tooltip" data-placement="bottom" data-original-title="Answers")
+                                            span #{question.answer_count}
+                                        li
+                                            a(data-toggle="tooltip" data-placement="bottom" data-original-title="Score")
+                                            span #{question.score}
+                                .col-md-10.col-sm-10.col-xs-12
+                                    button Revoke
+                                    .pull-right.tagcloud
+                                        each tag in question.tags
+                                            a(href="") #{tag}
+                            div.answers
                                 p.answer Answer 1
                                 button.accept Accept
+                                br
                                 p.answer Answer 2
                                 button.accept Accept
                     // Question Listing End
                     // Pagination View More
                     .text-center.clearfix
                     // Pagination View More End
+
+        div.bottom
+
+            div.allBounties
+                h2.allBountiesLabel All Bounties
+                div.bountyBox
+                    each question in questions
+                        .listing-grid
+                            .row
+                                .col-md-2.col-sm-2.col-xs-12.hidden-xs
+                                    a(data-toggle="tooltip" data-placement="bottom" data-original-title=question.owner.display_name href=question.owner.link)
+                                    img.img-responsive.center-block(alt="" src=question.owner.profile_image)
+                                .col-md-7.col-sm-8.col-xs-12
+                                    h3
+                                    a(href=question.link)  #{question.title}
+                                    .listing-meta
+                                        span
+                                            i.fa.fa-clock-o(aria-hidden="true")
+                                            | #{question.creation_date}
+                                        span
+                                            i.fa.fa.fa-eye(aria-hidden="true")
+                                            |  #{question.view_count} Views
+                                .col-md-3.col-sm-2.col-xs-12
+                                    ul.question-statistic
+                                        button.answerBtnSm(type='button', data-toggle='modal', data-target='#answerModal') Answer
+                                        li.active
+                                            a(data-toggle="tooltip" data-placement="bottom" data-original-title="Answers")
+                                            span #{question.answer_count}
+                                        li
+                                            a(data-toggle="tooltip" data-placement="bottom" data-original-title="Score")
+                                            span #{question.score}
+                                                        div.answers
+                            p.answer Answer 1
+
+            div.allQuestions
+                h2.allQuestionsLabel All Questions
+                //p Question
+                //button Start a Bounty
+                div.questionBox
+                    each question in questions
+                        .listing-grid
+                            .row
+                                .col-md-2.col-sm-2.col-xs-12.hidden-xs
+                                    a(data-toggle="tooltip" data-placement="bottom" data-original-title=question.owner.display_name href=question.owner.link)
+                                    img.img-responsive.center-block(alt="" src=question.owner.profile_image)
+                                .col-md-7.col-sm-8.col-xs-12
+                                    h3
+                                    a(href=question.link)  #{question.title}
+                                    .listing-meta
+                                        span
+                                            i.fa.fa-clock-o(aria-hidden="true")
+                                            | #{question.creation_date}
+                                        span
+                                            i.fa.fa.fa-eye(aria-hidden="true")
+                                            |  #{question.view_count} Views
+                                .col-md-3.col-sm-2.col-xs-12
+                                    ul.question-statistic
+                                        li.active
+                                            a(data-toggle="tooltip" data-placement="bottom" data-original-title="Answers")
+                                            span #{question.answer_count}
+                                        li
+                                            a(data-toggle="tooltip" data-placement="bottom" data-original-title="Score")
+                                            span #{question.score}
+                                .col-md-10.col-sm-10.col-xs-12
+                                    button Start a Bounty
+                                    //- .pull-right.tagcloud
+                                    //-     each tag in question.tags
+                                    //-         a(href="") #{tag}
+
+        div#answerModal.modal.fade
+            div.modal-dialog(role='document')
+                div.modal-content
+                    div.modal-header
+                        h3.modal-title Submit Answer
+                        button.close(type='button', data-dismiss='modal', aria-label='close')
+                            span(aria-hidden='true') &times;
+                    div.modal-body
+                        form(action='' method='')
+                            textarea(name='modalAnswerText' cols='68' rows='8')
+                    div.modal-footer
+                        button.btn.btn-primary(type='button') Save Changes
+                        button.btn.btn-secondary(type='button', data-dismiss='modal') Close

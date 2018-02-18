@@ -12,7 +12,7 @@ div.myBounties {
     padding-right: 1em;
 }
 
-h2.myBountiesLabel {
+h2.myBountiesLabel, h2.allBountiesLabel, h2.allQuestionsLabel {
     background: #FFF;
     display: inline-block;
     padding: 0 0.5em;
@@ -27,14 +27,18 @@ button.revoke {
     margin: 0 0 20px 20px;
 }
 
-p.answer {
-    margin: 0 20px 0 40px;
-    display: inline-block;
+div.answers {
+    margin-top: 20px;
 }
 
-button.answer {
-    background: #00F;
-    border-radius: 10px;
+p.answer {
+    display: inline-block;
+    margin: 0 20px 0 50px;
+}
+
+button.answerBtnLg {
+    background: #0077CC;
+    border: 1px solid #9A9A9A;
     color: #FFF;
     display: inline-block;
     font-size: 1.6em;
@@ -42,8 +46,89 @@ button.answer {
     margin-right: 20px;
     height: 40px;
     width: 100px;
+    top: 4px;
 }
 
 button.accept {
     display: inline-block;
+}
+
+div.bottom {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+div.allBounties {
+    border: 1px solid black;
+    font-size: 1em;
+    float: left;
+    margin-top: 20px;
+    margin-right: 5px;
+    width: 49.5%;
+}
+
+div.allQuestions {
+    border: 1px solid black;
+    float: right;
+    margin-top: 20px;
+    width: 49.5%;
+}
+
+/* All Bounties DIV */
+div.bountyBox {
+    padding: 0 8px;
+}
+
+div.bountyBox img.img-responsive.center-block {
+    height: 50px;
+}
+
+button.answerBtnSm {
+    background: #0077CC;
+    border: 1px solid #9A9A9A;
+    color: #FFF;
+    display: inline-block;
+    font-size: 1.2em;
+    margin-bottom: 8px;
+    height: 30px;
+    width: 80px;
+    top: 4px;
+}
+
+/* All Questions DIV */
+div.questionBox {
+    padding: 0 8px;
+}
+
+div.questionBox img.img-responsive.center-block {
+    height: 50px;
+}
+
+/* Answer Modal */
+
+h3.modal-title {
+    display: inline-block;
+}
+
+div.modal-body textarea {
+    resize: none;
+}
+
+/*div.answerBtnModal {
+    background: #FFF;
+    border: 1px solid black;
+    display: none;
+    margin: 0 auto;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    height: 600px;
+    width: 800px;
+}*/
+
+/* Bootstrap customizations */
+.modal-header, .modal-body, .modal-footer {
+    border: none;
 }
