@@ -181,6 +181,8 @@ html(lang="en")
           //   documentation site
           clientId: 11854, 
           key: 'ekGQbH8mopUzetlfSTPUrQ((', 
+          //clientId: 11870,
+          //key: 'TI10PZ0HLYke*WkA0HpY4A((',
           // Used for cross domain communication, it will be validated
           channelUrl: 'http://www.ethanswer.com/',
           redirect_uri:'http://www.ethanswer.com/',
@@ -199,16 +201,19 @@ html(lang="en")
           //   is important; most browsers will hide windows opened without a
           //   'click blessing'
           SE.authenticate({
-              success: function(data) { 
-                  alert(
-                      'User Authorized with account id = ' + 
-                      data.networkUsers[0].account_id + ', got access token = ' + 
-                      data.accessToken
-                  ); 
+              success: function(data) {
+                  localStorage.setItem('account_id',JSON.stringify(data.networkUsers[0].account_id));
+                  localStorage.setItem('access_token',JSON.stringify(data.accessToken));
+                  //- alert(
+                  //-     'User Authorized with account id = ' + 
+                  //-     data.networkUsers[0].account_id + ', got access token = ' + 
+                  //-     data.accessToken
+                  //- ); 
               },
               error: function(data) { 
                   alert('An error occurred:\n' + data.errorName + '\n' + data.errorMessage); 
               },
+              scope: ['read_inbox','write_access'],
               networkUsers: true
           });
       });
