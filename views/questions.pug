@@ -3,55 +3,62 @@ extends layout
 block content
     .col-md-12.col-sm-12.col-xs-12
         .panel.panel-primary
-        .panel-heading
-            // Tabs
-            ul.nav.panel-tabs
-                li
-                    a(data-toggle="tab" href="#tab1")
-                        i.icofont.icon-ribbon
-                        span.hidden-xs Unanswered Questions
-                li
-                    a(data-toggle="tab" href="#tab2")
-                        i.icofont.icon-layers
-                        span.hidden-xs Top Questions
-                li
-                    a(data-toggle="tab" href="#tab4")
-                        i.icofont.icon-linegraph
-                        span.hidden-xs Questions with no answers
+        //- .panel-heading
+        //-     // Tabs
+        //-     ul.nav.panel-tabs
+        //-         li
+        //-             a(data-toggle="tab" href="#tab1")
+        //-                 i.icofont.icon-ribbon
+        //-                 span.hidden-xs Unanswered Questions
+        //-         li
+        //-             a(data-toggle="tab" href="#tab2")
+        //-                 i.icofont.icon-layers
+        //-                 span.hidden-xs Top Questions
+        //-         li
+        //-             a(data-toggle="tab" href="#tab4")
+        //-                 i.icofont.icon-linegraph
+        //-                 span.hidden-xs Questions with no answers
         .panel-body
-        .tab-content
-            #tab1.tab-pane.active
-                each question in questions
-                    // Question Listing
-                    .listing-grid
-                        .row
-                            .col-md-2.col-sm-2.col-xs-12.hidden-xs
-                                a(data-toggle="tooltip" data-placement="bottom" data-original-title=question.owner.display_name href=question.owner.link)
-                                img.img-responsive.center-block(alt="" src=question.owner.profile_image)
-                            .col-md-7.col-sm-8.col-xs-12
-                                h3
-                                a(href=question.link)  #{question.title}
-                                .listing-meta
-                                    span
-                                        i.fa.fa-clock-o(aria-hidden="true")
-                                        | #{question.creation_date}
-                                    span
-                                        i.fa.fa.fa-eye(aria-hidden="true")
-                                        |  #{question.view_count} Views
-                            .col-md-3.col-sm-2.col-xs-12
-                                ul.question-statistic
-                                    li.active
-                                        a(data-toggle="tooltip" data-placement="bottom" data-original-title="Answers")
-                                        span #{question.answer_count}
-                                    li
-                                        a(data-toggle="tooltip" data-placement="bottom" data-original-title="Score")
-                                        span #{question.score}
-                            .col-md-10.col-sm-10.col-xs-12
-                                button Start a bounty
-                                .pull-right.tagcloud
-                                    each tag in question.tags
-                                        a(href="") #{tag}
-            // Question Listing End
-            // Pagination View More
-            .text-center.clearfix
-            // Pagination View More End
+            div.myBounties
+                h2.myBountiesLabel My Bounties
+                .tab-content
+                    #tab1.tab-pane.active
+                        each question in questions
+                            // Question Listing
+                            .listing-grid
+                                .row
+                                    .col-md-2.col-sm-2.col-xs-12.hidden-xs
+                                        a(data-toggle="tooltip" data-placement="bottom" data-original-title=question.owner.display_name href=question.owner.link)
+                                        img.img-responsive.center-block(alt="" src=question.owner.profile_image)
+                                    .col-md-7.col-sm-8.col-xs-12
+                                        h3
+                                        a(href=question.link)  #{question.title}
+                                        .listing-meta
+                                            span
+                                                i.fa.fa-clock-o(aria-hidden="true")
+                                                | #{question.creation_date}
+                                            span
+                                                i.fa.fa.fa-eye(aria-hidden="true")
+                                                |  #{question.view_count} Views
+                                    .col-md-3.col-sm-2.col-xs-12
+                                        ul.question-statistic
+                                            button.answer Answer
+                                            li.active
+                                                a(data-toggle="tooltip" data-placement="bottom" data-original-title="Answers")
+                                                span #{question.answer_count}
+                                            li
+                                                a(data-toggle="tooltip" data-placement="bottom" data-original-title="Score")
+                                                span #{question.score}
+                                    .col-md-10.col-sm-10.col-xs-12
+                                        button Revoke
+                                        .pull-right.tagcloud
+                                            each tag in question.tags
+                                                a(href="") #{tag}
+                                p.answer Answer 1
+                                button.accept Accept
+                                p.answer Answer 2
+                                button.accept Accept
+                    // Question Listing End
+                    // Pagination View More
+                    .text-center.clearfix
+                    // Pagination View More End

@@ -6,3 +6,44 @@ body {
 a {
   color: #00B7FF;
 }
+
+div.myBounties {
+    border: 1px solid black;
+    padding-right: 1em;
+}
+
+h2.myBountiesLabel {
+    background: #FFF;
+    display: inline-block;
+    padding: 0 0.5em;
+    position: relative;
+    top: -20px;
+    left: 20px;
+    width: wrap;
+}
+
+button.revoke {
+    display: block;
+    margin: 0 0 20px 20px;
+}
+
+p.answer {
+    margin: 0 20px 0 40px;
+    display: inline-block;
+}
+
+button.answer {
+    background: #00F;
+    border-radius: 10px;
+    color: #FFF;
+    display: inline-block;
+    font-size: 1.6em;
+    font-style: bold;
+    margin-right: 20px;
+    height: 40px;
+    width: 100px;
+}
+
+button.accept {
+    display: inline-block;
+}
