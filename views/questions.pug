@@ -47,7 +47,7 @@ block content
                                         a(data-toggle="tooltip" data-placement="bottom" data-original-title="Score")
                                         span #{question.score}
                             .col-md-10.col-sm-10.col-xs-12
-                                button Start a bounty
+                                button(onClick="startBounty('"+question.title+"','"+question.owner.user_id+"','"+question.link+"',"+question.question_id+")") Start a bounty
                                 .pull-right.tagcloud
                                     each tag in question.tags
                                         a(href="") #{tag}
