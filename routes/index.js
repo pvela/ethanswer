@@ -9,7 +9,9 @@ var request = require('request');
 /* GET home page. */
 router.get('/', function(req, res, next) {
   getQuestions(function(err,questions) {
-    res.render('questions', { questions: questions });
+    var myBounties = [];
+    var allBounties = [];
+    res.render('questions', { questions: questions, myBounties: myBounties, allBounties: allBounties });
   });
   // Get all the questions (http://api.stackexchange.com/docs/questions)
 
