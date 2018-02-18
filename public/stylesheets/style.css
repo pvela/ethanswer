@@ -72,7 +72,7 @@ div.bountyBox {
 }
 
 div.bountyBox img.img-responsive.center-block {
-    height: 50px;
+    height: 64px;
 }
 
 button.answerBtnSm {
@@ -97,7 +97,7 @@ div.questionBox {
 }
 
 div.questionBox img.img-responsive.center-block {
-    height: 50px;
+    height: 64px;
 }
 
 /* Review Bounties Modal */
@@ -143,19 +143,6 @@ div.modal-body button.btn.btn-primary {
     background: #0095FF;
     color: #FFF;
 }
-
-/*div.answerBtnModal {
-    background: #FFF;
-    border: 1px solid black;
-    display: none;
-    margin: 0 auto;
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    height: 600px;
-    width: 800px;
-}*/
 
 /* 'Start a Bounty' Modal */
 
