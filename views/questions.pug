@@ -7,7 +7,7 @@ block content
                 h2.myBountiesLabel My Bounties
                 .tab-content
                     #tab1.tab-pane.active
-                        - let question = questions[0]
+                        - let question = questions[12]
                         //each question in questions
                         // Question Listing
                         .listing-grid
@@ -50,7 +50,7 @@ block content
             div.allBounties
                 h2.allBountiesLabel All Bounties
                 div.bountyBox
-                    each question in questions
+                    each question in questions.slice(8,14)
                         .listing-grid
                             .row
                                 .col-md-2.col-sm-2.col-xs-12.hidden-xs
