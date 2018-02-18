@@ -9,6 +9,7 @@ a {
 
 div.myBounties {
     border: 1px solid black;
+    margin-top: 10px;
     padding-right: 1em;
 }
 
@@ -37,16 +38,20 @@ p.answer {
 }
 
 button.answerBtnLg {
-    background: #0077CC;
+    background: #0095FF;
     border: 1px solid #9A9A9A;
     color: #FFF;
     display: inline-block;
     font-size: 1.6em;
     font-style: bold;
     margin-right: 20px;
-    height: 40px;
+    height: 36px;
     width: 100px;
     top: 4px;
+}
+
+button.answerBtnLg:hover {
+    background: #0077CC;
 }
 
 button.accept {
@@ -85,7 +90,7 @@ div.bountyBox img.img-responsive.center-block {
 }
 
 button.answerBtnSm {
-    background: #0077CC;
+    background: #0095FF;
     border: 1px solid #9A9A9A;
     color: #FFF;
     display: inline-block;
@@ -94,6 +99,10 @@ button.answerBtnSm {
     height: 30px;
     width: 80px;
     top: 4px;
+}
+
+button.answerBtnSm:hover {
+    background: #0077CC;
 }
 
 /* All Questions DIV */
@@ -115,6 +124,11 @@ div.modal-body textarea {
     resize: none;
 }
 
+div.modal-body button.btn.btn-primary {
+    background: #0095FF;
+    color: #FFF;
+}
+
 /*div.answerBtnModal {
     background: #FFF;
     border: 1px solid black;
@@ -127,6 +141,25 @@ div.modal-body textarea {
     height: 600px;
     width: 800px;
 }*/
+
+/* 'Start a Bounty' Modal */
+
+div.bountyInputFields {
+    margin: 0 auto;
+    width: 400px;
+}
+
+div.bountyInputFields label {
+    vertical-align: bottom;
+}
+
+div.bountyInputFields fieldset {
+    height: 40px;
+}
+
+#submitBountyForm label {
+    margin-right: 8px;
+}
 
 /* Bootstrap customizations */
 .modal-header, .modal-body, .modal-footer {
